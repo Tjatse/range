@@ -13,10 +13,12 @@ function Range(){
     return new Range();
   }
 
+  // maximize int.
+  var max = Math.pow(2, 32) - 1;
   // default options.
   this.options = {
-    min: Number.MIN_VALUE,
-    max: Number.MAX_VALUE,
+    min: -max,
+    max: max,
     res: {
       range  : /^[\s\d\-~,]+$/,
       blank  : /\s+/g,
