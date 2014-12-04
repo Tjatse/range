@@ -9,8 +9,8 @@ describe('Parse range from a string',function(){
       str3 = '-3~-10, 10~3',
       str4 = 'abc~232,a,b,c',
       str5 = '~100, 150~',
-      str6 = '--10~20,30, ,,,-,~, 5-, -9'
-  ;
+      str6 = '--10~20,30, ,,,-,~, 5-, -9',
+      max = Math.pow(2, 32) - 1;
 
   function validArray(rng, min, max){
     expect(rng).to.be.an('array');
@@ -52,8 +52,8 @@ describe('Parse range from a string',function(){
       var rng = range.parse(str5);
       should.exist(rng);
       expect(rng.length).to.eql(2);
-      validArray(rng[0], Number.MIN_VALUE, 100);
-      validArray(rng[1], 150, Number.MAX_VALUE);
+      validArray(rng[0], -max, 100);
+      validArray(rng[1], 150, max);
     })
   });
 
