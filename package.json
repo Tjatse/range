@@ -1,0 +1,34 @@
+{
+  "name": "tiny-range",
+  "version": "0.0.1",
+  "description": "Range parser that parse range from string, e.g. \"0, 1, 7~8, 9-10, 100~105\" -> [[0, 1], [7, 10], [100, 105]]",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha -R spec -t 5000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Tjatse/range.git"
+  },
+  "keywords": [
+    "range",
+    "range parser",
+    "parse range"
+  ],
+  "author": "Tjatse",
+  "license": "Apache, Version 2.0",
+  "bugs": {
+    "url": "https://github.com/Tjatse/range/issues"
+  },
+  "engines": [
+    "node >= 0.10.0"
+  ],
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "mocha": "^1.21.4",
+    "chai": "^1.9.1"
+  },
+  "readmeFilename": "README.md"
+}
